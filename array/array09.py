@@ -8,7 +8,7 @@ def minWindow(s: str, t: str) -> str:
     left,right = 0,0 # 记录窗口的两端（左闭右开）
     valid = 0 # 记录窗口中满足条件数（valid == len(need)）
     
-    start,lenth = 0,inf # 记录最小覆盖子串的起始索引及长度
+    start,length = 0,inf # 记录最小覆盖子串的起始索引及长度
 
     for tchar in t:
         need[tchar] += 1
@@ -27,9 +27,9 @@ def minWindow(s: str, t: str) -> str:
         # 判断左侧窗口是否要收缩
         while valid == len(need):
             # 更新最小子串
-            if right-left < lenth:
+            if right-left < length:
                 start = left
-                lenth = right-left
+                length = right-left
             
             d = s[left]
             left += 1
@@ -38,6 +38,6 @@ def minWindow(s: str, t: str) -> str:
                     valid -= 1
                 window[d] -= 1
 
-    return "" if lenth == inf else s[start:start+lenth]
+    return "" if length == inf else s[start:start+length]
 
 print(minWindow("ADOBECODEBANC","ABC"))
