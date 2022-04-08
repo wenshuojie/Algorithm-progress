@@ -37,10 +37,7 @@ def minWindow(s: str, t: str) -> str:
                 if window[d] == need[d]:
                     valid -= 1
                 window[d] -= 1
-                
-    if lenth == inf:
-        return ""
-    else:
-        return s[start:start+lenth]
+
+    return "" if lenth == inf else s[start:start+lenth]
 
 print(minWindow("ADOBECODEBANC","ABC"))
