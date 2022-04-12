@@ -14,7 +14,7 @@ def left_bound(nums: List[int], target: int) -> int:
         elif nums[mid] > target:
             right = mid
     
-    return left
+    return left if nums[left] == target and left < len(nums) else -1
 
 print(left_bound([1,2,2,2,3],2))
 
@@ -30,7 +30,8 @@ def right_bound(nums:List[int],target:int) -> int:
         elif nums[mid] > target:
             right = mid
 
-    return left-1 # 终止条件是left==right，且nums[mid] == target时，left=mid+1
+    return left-1 if nums[left-1] == target and left-1 < len(nums) else -1 # 终止条件是left==right，且nums[mid] == target时，left=mid+1
 
 print(right_bound([1,2,2,2,3],2))
+print(right_bound([2,2],3))
         
