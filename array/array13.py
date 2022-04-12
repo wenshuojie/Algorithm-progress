@@ -1,11 +1,10 @@
 # 704. 二分查找
 
-from operator import le
 from typing import List
 
 def search(nums: List[int], target: int) -> int:
     left = 0
-    right = len(nums)-1
+    right = len(nums)-1 # 搜索区间[**]
 
     while(left <= right):
         mid = left + (right-left)//2
