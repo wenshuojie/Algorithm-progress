@@ -23,7 +23,7 @@ class Solution:
         left = 0
         right = len(numbers) - 1
         result = []
-        while left <= right:
+        while left < right:
             sums = numbers[left] + numbers[right]
             left_val = numbers[left]
             right_val = numbers[right]
@@ -31,24 +31,24 @@ class Solution:
                 result.append([numbers[left],numbers[right]])
                 # left += 1
                 # right -= 1
-                while numbers[left] == left_val and left <= right:
+                while numbers[left] == left_val and left < right:
                      left += 1
-                while numbers[right] == right_val and left <= right:
+                while numbers[right] == right_val and left < right:
                     right -= 1
             elif sums > target:
                 # right -= 1
-                while numbers[right] == right_val and left <= right:
+                while numbers[right] == right_val and left < right:
                     right -= 1
             elif sums < target:
                 # left += 1
-                while numbers[left] == left_val and left <= right:
+                while numbers[left] == left_val and left < right:
                      left += 1
 
         return result
 
 solution = Solution()
 print(solution.twoSum_v2(numbers = [1,3,1,2,2,3], target = 4))
-print(solution.twoSum_v2(numbers = [1,1,1,2,2,3,3], target = 4))
+print(solution.twoSum_v2(numbers = [1,1,1,3,3,3,2], target = 4))
 
 
 
