@@ -1,9 +1,5 @@
 # 单链表的倒数第 k 个节点
 # 只遍历一次
-
-from tkinter.messagebox import NO
-
-
 class ListNode:
     def __init__(self, val=0, next=None):
         self.val = val
