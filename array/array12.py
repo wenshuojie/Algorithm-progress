@@ -23,21 +23,24 @@
 #     return maxlength
 
 
-def lengthOfLongestSubstring(s: str) -> int:
-    window = set()
-    right,max_len = -1,0
+from collections import defaultdict
 
-    for i in range(len(s)):
-        if i != 0:
-            window.remove(s[i-1])
-        
-        while right+1 < len(s) and s[right+1] not in window:
-            window.add(s[right+1])
+class Solution:
+    def lengthOfLongestSubstring(self, s: str) -> int:
+        left = right = 0
+        window = defaultdict(int)
+        max_len = 0
+
+        while right < len(s):
+            char = s[right]
+            window[char] += 1
             right += 1
 
-        max_len = max(max_len,right-i+1)
+            while window[char] > 1:
+                # max_len = max(max_len,right-left-1)
+                window[s[left]] -= 1
+                left += 1
+            
+            max_len = max(max_len,right-left)
 
-    return max_len
-
-print(lengthOfLongestSubstring("pwwkew")) # 3
-print(lengthOfLongestSubstring("abcabcbb")) # 3
+        return max_len
