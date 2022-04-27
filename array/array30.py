@@ -1,6 +1,5 @@
 # 42. 接雨水
 
-from turtle import right
 from typing import List
 
 class Solution:
