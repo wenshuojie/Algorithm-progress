@@ -10,7 +10,7 @@
 | [binary_tree08](./binary_tree08.py) | 105. 从前序与中序遍历序列构造二叉树 | 构造 |
 | [binary_tree09](./binary_tree09.py) | 106. 从中序与后序遍历序列构造二叉树 | 构造 |
 | [binary_tree10](./binary_tree10.py) | 889. 根据前序和后序遍历构造二叉树 | 构造 |
-| [binary_tree11](./binary_tree11.py) | 297. 二叉树的序列化与反序列化 | 前序&后序 |
+| [binary_tree11](./binary_tree11.py) | 297. 二叉树的序列化与反序列化 | 前序&后序&层序 |
 | [binary_tree12](./binary_tree12.py) | 层序遍历二叉树 |  |
 
 
