@@ -1,4 +1,4 @@
-# 912. 排序数组
+# 912. 排序数组（归并排序）
 
 from typing import List
 
