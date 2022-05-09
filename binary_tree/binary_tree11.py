@@ -1,7 +1,6 @@
 # 297. 二叉树的序列化与反序列化
-from collections import deque
 
-from sklearn import tree #可两端操作
+from collections import deque #可两端操作
 
 class TreeNode(object):
     def __init__(self, x):
