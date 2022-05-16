@@ -9,7 +9,7 @@ class Solution:
         self.n = len(matrix)
         res = math.inf
         for j in range(self.n):
-            self.memo = [[6666]*self.n]*self.n
+            self.memo = [[6666 for _ in range(self.n)] for _ in range(self.n)]
             res = min(res, self.dp_v2(matrix, self.n-1, j))
         return res
 
