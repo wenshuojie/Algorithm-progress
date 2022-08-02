@@ -35,6 +35,24 @@ p1 = ListNode(1,p2)
 solution = Solution()
 solution.removeNthFromEnd(p1,3)
 
+# # method 2
+# class Solution:
+#     def removeNthFromEnd(self, head: Optional[ListNode], n: int) -> Optional[ListNode]:
+#         vir = ListNode()
+#         vir.next = head
 
+#         p1, p2 = head, head
+#         p3 = vir
+
+#         for _ in range(n):
+#             p1 = p1.next
+        
+#         while p1:
+#             p1 = p1.next
+#             p2 = p2.next
+#             p3 = p3.next
+        
+#         p3.next = p2.next
+#         return vir.next
 
 

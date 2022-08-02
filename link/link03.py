@@ -7,13 +7,18 @@ class ListNode:
 
 def penultimatek(ListNode, k):
     p1, p2 = ListNode, ListNode
-    for i in range(k):
-        p1 = p1.next
-    
+    count = 0
+    for _ in range(k):
+        if p1:
+            p1 = p1.next
+            count += 1
+
+    if not p1 and count < k:
+        return None
+
     while p1:
         p1 = p1.next
         p2 = p2.next
-    
     return p2
 
 p5 = ListNode(5,None)
@@ -22,5 +27,9 @@ p3 = ListNode(3,p4)
 p2 = ListNode(2,p3)
 p1 = ListNode(1,p2)
 
-print(penultimatek(p1,1).val)
+node = penultimatek(p1,2)
+if node:
+    print('{'+str(node.val)+'}')
+else:
+    print('{}')
     
