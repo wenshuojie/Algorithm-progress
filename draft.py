@@ -160,3 +160,8 @@ print(envelopes)
 a = 'a'
 print(ord(a))
 # %%
+import heapq
+
+ass_pq = heapq.heapify(list())
+print(ass_pq)
+# %%

@@ -1,14 +1,15 @@
-# 23. 合并K个升序链表
-from typing import Optional, List
+# 合并k个已排序的链表
+
 from queue import PriorityQueue
 
 class ListNode:
-    def __init__(self, val=0, next=None):
-        self.val = val
-        self.next = next
+    def __init__(self, x):
+        self.val = x
+        self.next = None
 
+# 难点在于，如何快速得到 k 个节点中的最小节点，接到结果链表上 => 最小堆
 class Solution:
-    def mergeKLists(self, lists: List[Optional[ListNode]]) -> Optional[ListNode]:
+    def mergeKLists(self , lists: List[ListNode]) -> ListNode:
         if len(lists) == 0:
             return None
         
@@ -31,3 +32,5 @@ class Solution:
                 ass_pq.put((lists[idx].val, idx))
                 
         return vir.next
+
+        
