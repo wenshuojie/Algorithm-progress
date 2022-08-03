@@ -160,8 +160,10 @@ print(envelopes)
 a = 'a'
 print(ord(a))
 # %%
-import heapq
+from queue import PriorityQueue
 
-ass_pq = heapq.heapify(list())
-print(ass_pq)
+test_queue = PriorityQueue()
+test_queue.put((5,0))
+test_queue.put((1,1))
+print(test_queue.get())
 # %%
