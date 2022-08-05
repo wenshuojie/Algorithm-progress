@@ -1,5 +1,7 @@
-| File | Description |
-| :----:| :---- | :---- |
+
+<details>
+<summary>链表</summary>
+| :----:| :----: |
 | [BM1](./BM1.py) | 反转链表 |
 | [BM2](./BM2.py) | 链表内指定区间反转 |
 | [BM3]() |  |
@@ -15,4 +17,10 @@
 | [BM13](./BM13.py) | 判断一个链表是否为回文结构 |
 | [BM14](./BM14.py) | 链表的奇偶重排 |
 | [BM15](./BM15.py) | 删除有序链表中重复的元素-I |
+</details>
 
+<details>
+<summary>二分查找</summary>
+| **二分查找** | **Description** |
+| :----:| :---- |
+</details>
