@@ -7,16 +7,17 @@ class ListNode:
 
 class Solution:
     def deleteDuplicates(self , head: ListNode) -> ListNode:
-        res = ListNode(-9999)
-        res.next = head
-        p = res
-
-        while p.next and p.next.next:
-            if p.next.val != p.next.next.val:
+        if not head:
+            return head
+        
+        res, p = head, head
+        
+        while p:
+            if res.val == p.val:
                 p = p.next
             else:
-                sim_val = p.next.val
-                while p.next and p.next.val == sim_val:
-                    p.next = p.next.next
-        
-        return res.next
+                res.next = p
+                res = res.next
+                p = p.next
+        res.next = None
+        return head

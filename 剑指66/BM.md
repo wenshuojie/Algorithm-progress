@@ -18,10 +18,12 @@
 | [BM13](./BM13.py) | 判断一个链表是否为回文结构 |
 | [BM14](./BM14.py) | 链表的奇偶重排 |
 | [BM15](./BM15.py) | 删除有序链表中重复的元素-I |
+| [BM16](./BM16.py) | 删除有序链表中重复的元素-II |
 </details>
 
 <details><summary>二分查找</summary>
 
 |File|Description|
 |:----:|:----:|
+| [BM17](./BM17.py) | 二分查找-I |
 </details>
