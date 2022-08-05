@@ -2,9 +2,6 @@
 
 from typing import List
 
-from torch import le
-
-
 class ListNode:
     def __init__(self, x):
         self.val = x
@@ -52,7 +49,7 @@ class Solution:
             return head
 
         fast, slow = head, head
-        while fast.next and fast.next.next:
+        while fast.next and fast.next.next: # 偶数：这里找的中点是前一个
             fast = fast.next.next
             slow = slow.next
         mid = slow.next
