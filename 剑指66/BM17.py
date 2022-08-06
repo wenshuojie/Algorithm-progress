@@ -17,3 +17,5 @@ class Solution:
         
         return -1
 
+solution = Solution()
+print(solution.search([2],3))
