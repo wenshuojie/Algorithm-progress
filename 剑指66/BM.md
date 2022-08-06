@@ -26,4 +26,5 @@
 |File|Description|
 |:----:|:----:|
 | [BM17](./BM17.py) | 二分查找-I |
+| [BMEX1](./BMEX1.py) | 二分查找-搜索左右边界 |
 </details>

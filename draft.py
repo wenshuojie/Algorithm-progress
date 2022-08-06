@@ -167,3 +167,6 @@ test_queue.put((5,0))
 test_queue.put((1,1))
 print(test_queue.get())
 # %%
+for i in range(5, 3, -1):
+    print(i)
+# %%
