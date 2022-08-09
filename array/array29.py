@@ -7,7 +7,7 @@ class Solution:
         res = ""
         for i in range(len(s)):
             res1 = self.centerPalindrome(s,i,i) # 奇数中心
-            res2 = self.centerPalindrome(s,i,i+1) # 偶数中心
+            res2 = self.centerPalindrome(s,i-1,i) # 偶数中心
             res = res1 if len(res1) > len(res) else res
             res = res2 if len(res2) > len(res) else res
 
@@ -21,4 +21,4 @@ class Solution:
         return s[left+1:right]
 
 solution = Solution()
-print(solution.longestPalindrome("babad"))
+print(solution.longestPalindrome("abbaa"))
