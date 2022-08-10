@@ -2,6 +2,7 @@
 from ast import Num
 from cmath import inf
 from collections import defaultdict
+from platform import node
 from turtle import pen
 from typing import List
 
@@ -188,11 +189,10 @@ q.put(1)
 q.put(2)
 print(q.get())
 # %%
-from queue import Queue
+from collections import deque
+node_list = deque()
+node_list.append(1)
+node_list.appendleft(2)
+print(node_list.pop())
 
-q = Queue()
-q.put(1)
-q.put(2)
-
-for i in q:
-    print(i)
+# %%
