@@ -170,3 +170,29 @@ print(test_queue.get())
 for i in range(5, 3, -1):
     print(i)
 # %%
+a = [1,2,3]
+a.extend([2,3,4])
+print(a)
+# %%
+from queue import Queue
+
+q = Queue()
+q.put([2,3,4])
+print(q)
+
+# %%
+from queue import Queue
+
+q = Queue()
+q.put(1)
+q.put(2)
+print(q.get())
+# %%
+from queue import Queue
+
+q = Queue()
+q.put(1)
+q.put(2)
+
+for i in q:
+    print(i)

@@ -35,3 +35,4 @@ def checkInclusion(s1: str, s2: str) -> bool:
     return False
 
 print(checkInclusion('ab','eidboaoo'))
+print(checkInclusion('ab','eidbaooo'))               

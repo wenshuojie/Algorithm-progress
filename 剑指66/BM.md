@@ -33,6 +33,16 @@
 | [BMEX1](./BMEX1.py) | 二分查找-搜索左右边界 |
 </details>
 
+<details><summary>二叉树</summary>
+
+|File|Description|
+|:----:|:----:|
+| [BM26](./BM26.py) | 求二叉树的层序遍历 |
+| [BM28](./BM28.py) | 二叉树的最大深度 |
+| [BM33](./BM33.py) | 二叉树的最大深度 |
+| [BMEX4](./BMEX4.py) | 二叉树的镜像 |
+</details>
+
 <details><summary>二分查找</summary>
 
 |File|Description|
@@ -45,4 +55,6 @@
 | [BM92](./BM92.py) | 最长无重复子数组 |
 | [BM93](./BM93.py) | 盛水最多的容器 |
 | [BM94](./BM94.py) | 接雨水问题 |
+| [BMEX2](./BMEX2.py) | 字符串的排列 |
+| [BMEX3](./BMEX3.py) | 找到字符串中所有字母异位词 |
 </details>
