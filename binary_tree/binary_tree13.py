@@ -20,12 +20,12 @@ class Solution:
             if not root:
                 return "#"
 
-            left = self.traverse(root.left)
-            right = self.traverse(root.right)
+            left = traverse(root.left)
+            right = traverse(root.right)
             subtree = str(left)+','+str(right)+','+str(root.val)
             
             if tree_num[subtree] == 1:
-                res.append(subtree)
+                res.append(root)
 
             tree_num[subtree] += 1
             return subtree
