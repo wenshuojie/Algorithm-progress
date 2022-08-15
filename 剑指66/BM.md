@@ -42,6 +42,9 @@
 | [BM28](./BM28.py) | 二叉树的最大深度 |
 | [BM33](./BM33.py) | 二叉树的最大深度 |
 | [BMEX4](./BMEX4.py) | 二叉树的镜像 |
+| [BMEX5](./BMEX5.py) | 填充每个节点的下一个右侧节点指针 |
+| [BMEX6](./BMEX6.py) | 二叉树展开为链表 |
+| [BMEX7](./BMEX7.py) | 最大二叉树 |
 </details>
 
 <details><summary>二分查找</summary>
