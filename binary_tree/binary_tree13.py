@@ -33,4 +33,10 @@ class Solution:
         traverse(root)
         return res
 
-    
+node1 = TreeNode(2)
+node2 = TreeNode(1)
+node3 = TreeNode(1)
+node1.left = node2
+node1.right = node3
+solution = Solution()
+print(solution.findDuplicateSubtrees(node1))

@@ -196,3 +196,8 @@ node_list.appendleft(2)
 print(node_list.pop())
 
 # %%
+a = 'a,b,c'
+b = a.split(',')
+print(b.pop(1))
+print(b)
+# %%

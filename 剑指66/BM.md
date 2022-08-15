@@ -45,6 +45,9 @@
 | [BMEX5](./BMEX5.py) | 填充每个节点的下一个右侧节点指针 |
 | [BMEX6](./BMEX6.py) | 二叉树展开为链表 |
 | [BMEX7](./BMEX7.py) | 最大二叉树 |
+| [BMEX8](./BMEX8.py) | 三种类型的构造二叉树 |
+| [BMEX9](./BMEX9.py) | 二叉树的序列化和反序列化 |
+| [BMEX10](./BMEX10.py) | 寻找重复的子树 |
 </details>
 
 <details><summary>二分查找</summary>

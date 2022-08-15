@@ -43,3 +43,47 @@ class Solution:
         root.right = self.build_in_post(inorder, inorder_index+1, inEnd, postorder, postStart+left_size, postEnd-1)
         return root
         
+class Solution_v2:
+    # 从前序与中序遍历序列构造二叉树
+    def buildTree(self, preorder: List[int], inorder: List[int]) -> Optional[TreeNode]:
+        if not preorder:
+            return
+        
+        root_val = preorder[0]
+        root = TreeNode(root_val)
+        ind = inorder.index(root_val)
+
+        root.left = self.buildTree(preorder[1:ind+1], inorder[:ind])
+        root.right = self.buildTree(preorder[ind+1:], inorder[ind+1:])
+        return root
+    
+    # 从中序与后序遍历序列构造二叉树
+    def buildTree(self, inorder: List[int], postorder: List[int]) -> Optional[TreeNode]:
+        if not inorder:
+            return
+            
+        root_val = postorder[-1]
+        root = TreeNode(root_val)
+        ind = inorder.index(root_val)
+            
+        root.left = self.buildTree(inorder[:ind], postorder[:ind])
+        root.right = self.buildTree(inorder[ind+1:], postorder[ind:len(postorder)-1])
+        return root
+
+    # 根据前序和后序遍历构造二叉树
+    class Solution:
+        def constructFromPrePost(self, preorder: List[int], postorder: List[int]) -> Optional[TreeNode]:
+            if not preorder:
+                return
+
+            root = TreeNode(preorder[0])
+            if len(preorder) == 1:
+                return root
+            
+            leftsize = postorder.index(preorder[1])+1
+            root.left = self.constructFromPrePost(preorder[1:1+leftsize],postorder[:leftsize])
+            root.right = self.constructFromPrePost(preorder[1+leftsize:],postorder[leftsize:len(postorder)-1])
+            return root
+
+
+
