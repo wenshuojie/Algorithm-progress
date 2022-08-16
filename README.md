@@ -7,6 +7,6 @@
 - [sort](sort/sort.md)
 - [BST](BST/BST.md)
 - [DP](DP/DP.md)
-- [剑指101](剑指66/BM.md)
+- [剑指101](剑指101/BM.md)
 
 
