@@ -30,4 +30,25 @@ class Solution:
         self.traverse1(root.left)
         return res
 
-print([1,2,3] == [1,2,3])
+depth = 0
+maxdepth = 0
+
+def traverse(root):
+    global depth, maxdepth
+    if not root:
+        return 0
+
+    depth += 1
+    if not root.left and not root.right:
+        maxdepth = max(depth, maxdepth)
+    traverse(root.left)
+    traverse(root.right)
+    depth -= 1
+    return maxdepth
+
+node1 = TreeNode(1)
+node2 = TreeNode(2)
+node3 = TreeNode(3)
+node1.left = node2
+node1.right = node3
+print(traverse(node1))
