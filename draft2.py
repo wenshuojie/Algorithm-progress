@@ -1,6 +1,3 @@
-from turtle import right
-
-
 class TreeNode:
     def __init__(self, x):
         self.val = x
@@ -10,20 +7,27 @@ class TreeNode:
 class Solution:
     def isSymmetrical(self , pRoot: TreeNode) -> bool:
         if not pRoot:
-            return
-        
-        left = self.serialize(pRoot.left)
-        right = self.serialize(pRoot.right)
-        if left == right[::-1]:
+            return True
+
+        if self.traverse1(root) == self.traverse2(root):
             return True
         else:
             return False
-        
-    def serialize(self, node, res=[]):
-        if not node:
+
+    def traverse1(self, root, res=[]):
+        if not root:
             return
-        
-        self.serialize(node.left)
-        res.append(node.val)
-        self.serialize(node.right)
+        res.append(root.val)
+        self.traverse1(root.left)
+        self.traverse1(root.right)
         return res
+
+    def traverse2(self, root, res=[]):
+        if not root:
+            return
+        res.append(root.val)
+        self.traverse1(root.right)
+        self.traverse1(root.left)
+        return res
+
+print([1,2,3] == [1,2,3])
