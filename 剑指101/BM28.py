@@ -19,7 +19,7 @@ class Solution: # 遍历
             return
         
         self.depth += 1
-        if not node.left and not node.left:
+        if not node.left and not node.right:
             self.max_depth = max(self.depth, self.max_depth)
         self.traverse(node.left)
         self.traverse(node.right)

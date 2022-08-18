@@ -1,45 +1,23 @@
-# 不同的二叉搜索树
+# 二叉搜索树的最近公共祖先
+
+class TreeNode:
+    def __init__(self, x):
+        self.val = x
+        self.left = None
+        self.right = None
 
 class Solution:
-    def numTrees(self, n: int) -> int:
-        self.memo = [[0]*(n+1) for _ in range(n+1)] # 为了对齐
-        return self.helper(left=1, right=n)
+    def lowestCommonAncestor(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
+        val1 = min(p.val, q.val)
+        val2 = max(p.val, q.val)
+        return self.find(root, val1, val2)
     
-    def helper(self, left, right):
-        if left > right:
-            return 1
-        
-        if self.memo[left][right] != 0:
-            return self.memo[left][right]
-        
-        res = 0
-        for mid in range(left, right+1):
-            left_count = self.helper(left, mid-1)
-            right_count = self.helper(mid+1, right)
-            res += left_count * right_count
-        self.memo[left][right] = res
-
-        return res
-    
-    def generateTrees(self, n: int) -> List[Optional[TreeNode]]:
-        if n == 0:
+    def find(self, root, val1, val2):
+        if not root:
             return
-        return self.build(1, n)
-
-    def build(self, left, right):
-        res = []
-        if left > right:
-            res.append(None)
-            return res
+        if root.val < val1:
+            return self.find(root.right, val1, val2)
+        if root.val > val2:
+            return self.find(root.left, val1, val2)
         
-        for mid in range(left, right+1):
-            leftTree = self.build(left, mid-1)
-            rightTree = self.build(mid+1, right)
-            for leftNode in leftTree:
-                for rightNode in rightTree:
-                    root = TreeNode(mid)
-                    root.left = leftNode
-                    root.right = rightNode
-                    res.append(root)
-        
-        return res
+        return root # val1 <= root.val <= val2 => 则当前节点就是最近公共祖先

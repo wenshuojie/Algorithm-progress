@@ -2,6 +2,7 @@
 from ast import Num
 from cmath import inf
 from collections import defaultdict
+from curses import A_ALTCHARSET
 from platform import node
 from turtle import pen
 from typing import List
@@ -201,3 +202,31 @@ b = a.split(',')
 print(b.pop(1))
 print(b)
 # %%
+a = (1,2,3,3)
+b = {1,2,3,3}
+print(a)
+print(b)
+print(pow)
+# %%
+from queue import Queue
+
+class Solution:
+    def Print(self , pRoot: TreeNode) -> List[List[int]]:
+        res = []
+        node_list = Queue()
+        node_list.put(root)
+
+        while not node_list.empty():
+            row = []
+            node_len = node_list.qsize()
+            for _ in range(node_len):
+                node = node_list.get()
+                row.append(node.val)
+                if node.left:
+                    node_list.put(node.left)
+                if node.right:
+                    node_list.put(node.right)
+            res.append(row)
+        
+        return res
+

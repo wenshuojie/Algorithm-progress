@@ -57,6 +57,10 @@
 | [BMEX12](./BMEX12.py) | 二叉搜索树中第K小的元素（中序遍历的性质） |
 | [BMEX13](./BMEX13.py) | 验证二叉搜索树 |
 | [BMEX14](./BMEX14.py) | 二叉搜索树中的搜索，插入，删除 |
+| [BMEX15](./BMEX15.py) | 二叉搜索树构造 |
+| [BMEX16](./BMEX16.py) | 二叉树的最近公共祖先 |
+| [BMEX17](./BMEX17.py) | 二叉搜索树的最近公共祖先 |
+| [BMEX18](./BMEX18.py) | 完全二叉树的节点个数 |
 </details>
 
 <details><summary>二分查找</summary>
