@@ -27,3 +27,10 @@ class MedianFinder:
             return self.large[0]
         else:
             return (-(self.small[0])+self.large[0]) / 2
+
+medianFinder = MedianFinder()
+medianFinder.addNum(1)
+medianFinder.addNum(2)
+medianFinder.addNum(3)
+medianFinder.addNum(5)
+print(medianFinder.findMedian())

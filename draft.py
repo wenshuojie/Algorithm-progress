@@ -208,25 +208,15 @@ print(a)
 print(b)
 print(pow)
 # %%
-from queue import Queue
+a = ['']
+print(a.pop(0))
 
-class Solution:
-    def Print(self , pRoot: TreeNode) -> List[List[int]]:
-        res = []
-        node_list = Queue()
-        node_list.put(root)
+# %%
+from queue import PriorityQueue
 
-        while not node_list.empty():
-            row = []
-            node_len = node_list.qsize()
-            for _ in range(node_len):
-                node = node_list.get()
-                row.append(node.val)
-                if node.left:
-                    node_list.put(node.left)
-                if node.right:
-                    node_list.put(node.right)
-            res.append(row)
-        
-        return res
-
+a = PriorityQueue()
+a.put(5)
+a.put(2)
+a.put(4)
+print(a.get())
+# %%
