@@ -82,7 +82,7 @@ def partition(nums, left, right):
 
 if __name__ == '__main__':
     test_nums = [8,4,8,2,5,0,6]
-    test_nums2 = [1,3,2,4,2]
+    test_nums2 = [4,5,1,6,2,7,2,8]
     # bubble(test_nums)
     # select(test_nums)
     # insert(test_nums)
