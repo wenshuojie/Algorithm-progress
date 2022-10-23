@@ -57,6 +57,7 @@ void test_04(){
 }
 
 int main(){
-    test_04();
+    vector<int> test(9);
+    cout << test.size();
     return 0;
 }

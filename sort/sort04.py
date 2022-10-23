@@ -29,12 +29,6 @@ class Solution_v2: # 快速排序的应用
                 return nums[p]
         return -1
 
-    def shuffle(self, nums):
-        length = len(nums)
-        for i in range(length):
-            cInd = random.randint(i, length-1)
-            nums[i], nums[cInd] = nums[cInd], nums[i]
-
     def partition(self, nums, left, right):
         pivot = nums[left]
         i, j = left+1, right
@@ -48,6 +42,13 @@ class Solution_v2: # 快速排序的应用
             nums[i], nums[j] = nums[j], nums[i]
         nums[left], nums[j] = nums[j], nums[l]
         return j
+    
+    def shuffle(self, nums):
+        length = len(nums)
+        for i in range(length):
+            cInd = random.randint(i, length-1)
+            nums[i], nums[cInd] = nums[cInd], nums[i]
+
         
 
 
